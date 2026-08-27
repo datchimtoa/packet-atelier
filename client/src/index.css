@@ -48,9 +48,8 @@
   --amber: #d99b39;
   --line: rgba(22, 50, 76, 0.18);
   background-color: var(--paper-deep);
-  background-size: cover;
-  background-position: center;
-  background-attachment: fixed;
+  background-image: radial-gradient(circle at 1px 1px, rgba(22,50,76,.13) 1px, transparent 1.1px), linear-gradient(90deg, rgba(250,246,236,.97) 0%, rgba(250,246,236,.91) 58%, rgba(250,246,236,.72) 100%);
+  background-size: 19px 19px, auto;
   min-height: 100vh;
   color: var(--ink);
   display: grid;
@@ -79,7 +78,7 @@
 }
 
 .rail-brand { display: flex; align-items: center; gap: 13px; }
-.brand-mark { width: 43px; height: 43px; object-fit: contain; }
+.brand-mark { width: 43px; height: 43px; flex: 0 0 auto; }
 .eyebrow { margin: 0; color: var(--ink-soft); font-family: "IBM Plex Mono", monospace; font-size: 10px; font-weight: 600; letter-spacing: .14em; line-height: 1.35; }
 .brand-name { display: grid; gap: 1px; margin: 5px 0 0; color: var(--ink); font: 700 15px/.9 "Archivo", sans-serif; letter-spacing: -.055em; }
 .brand-name > span:first-child { color: var(--ink-soft); font: 600 8px/1 "IBM Plex Mono", monospace; letter-spacing: .21em; }
@@ -102,7 +101,7 @@
 .topline h1 { margin: 9px 0 0; font-size: clamp(32px, 4vw, 52px); line-height: .98; letter-spacing: -.065em; font-weight: 700; }
 .topline h1 em { color: var(--verm); font-weight: 500; }
 .browser-seal { display: flex; align-items: center; gap: 10px; padding: 8px 12px 8px 8px; border: 1px solid var(--line); background: rgba(250,246,236,.64); min-width: 200px; }
-.browser-seal img { width: 37px; height: 37px; object-fit: contain; }
+.browser-seal .mini-mark { width: 37px; height: 37px; flex: 0 0 auto; }
 .browser-seal strong { display: block; font: 600 10px/1.35 "IBM Plex Mono", monospace; color: var(--ink); letter-spacing: .03em; }
 .browser-seal span { display: block; color: var(--ink-soft); font-size: 11px; margin-top: 1px; }
 
@@ -158,7 +157,7 @@
 .output-window::before { content: ""; position: absolute; inset: 0; opacity: .33; pointer-events: none; background-image: linear-gradient(rgba(255,255,255,.05) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px); background-size: 18px 18px; }
 .ruler { position: relative; z-index: 1; height: 28px; padding: 0 12px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid rgba(250,246,236,.17); color: rgba(250,246,236,.52); font: 9px "IBM Plex Mono", monospace; letter-spacing: .14em; }
 .output-window pre { position: relative; z-index: 1; margin: 0; padding: 16px 18px 23px; min-height: 258px; overflow: auto; white-space: pre-wrap; overflow-wrap: anywhere; color: #f9efd9; font: 11px/1.62 "IBM Plex Mono", monospace; }
-.output-card-art { position: absolute; width: 185px; opacity: .09; right: -50px; bottom: -24px; mix-blend-mode: screen; transform: rotate(-10deg); pointer-events: none; }
+.output-card-art { position: absolute; width: 184px; height: 122px; opacity: .18; right: -45px; bottom: -26px; transform: rotate(-10deg); pointer-events: none; background: repeating-linear-gradient(0deg, rgba(250,246,236,.58) 0 2px, transparent 2px 12px), linear-gradient(135deg, transparent 0 12%, rgba(250,246,236,.6) 12% 14%, transparent 14% 28%, rgba(229,72,45,.85) 28% 33%, transparent 33% 100%); border: 1px solid rgba(250,246,236,.4); }
 .output-controls { display: flex; justify-content: space-between; gap: 12px; align-items: center; margin-top: 14px; }
 .reveal-toggle { border: 0; padding: 0; background: transparent; color: var(--ink-soft); font-size: 11px; display: inline-flex; align-items: center; gap: 7px; text-align: left; }
 .reveal-toggle:hover { color: var(--verm); }
@@ -189,7 +188,7 @@ footer { display: flex; justify-content: space-between; color: var(--ink-soft); 
 }
 
 @media (max-width: 980px) {
-  .atelier-app { grid-template-columns: 1fr; background-attachment: scroll; }
+  .atelier-app { grid-template-columns: 1fr; }
   .atelier-rail { min-height: auto; padding: 14px 20px; border-right: 0; border-bottom: 1px solid var(--line); flex-direction: row; align-items: center; gap: 20px; }
   .rail-rule, .rail-section, .rail-footnote { display: none; }
   .rail-spacer { display: none; }

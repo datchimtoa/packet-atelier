@@ -34,11 +34,6 @@ type AccountField = (typeof ACCOUNT_FIELDS)[number];
 type AccountRecord = Record<AccountField, string | null>;
 type InputMode = "auto" | "json" | "curl";
 
-const HERO_TEXTURE = "/manus-storage/packet-atelier-hero-texture_a369e076.jpg";
-const LOGO = "/manus-storage/packet-atelier-logo_8bdb0cfa.png";
-const PRIVACY_SEAL = "/manus-storage/packet-atelier-privacy-seal_ce847000.png";
-const OUTPUT_CARD = "/manus-storage/packet-atelier-output-card_7eccfa26.jpg";
-
 const DEMO_SOURCE = `curl 'https://example.local/sync' \\
   -H 'cookie: DEMO_COOKIE_A' \\
   -H 'x-atf-tma-session: DEMO_SESSION_A' \\
@@ -48,6 +43,17 @@ curl 'https://example.local/sync' \\
   -H 'cookie: DEMO_COOKIE_B' \\
   -H 'x-atf-tma-session: DEMO_SESSION_B' \\
   --data-raw '{"initData":"DEMO_INIT_B","device_id":"demo-device-b","tg_id":"10002","wallet":"DEMO_WALLET_B"}'`;
+
+function LogoMark({ className = "" }: { className?: string }) {
+  return (
+    <svg viewBox="0 0 64 64" className={className} aria-hidden="true" focusable="false">
+      <path d="M13 10h29l9 9v35H13z" fill="#FAF6EC" stroke="#16324C" strokeWidth="4" />
+      <path d="M42 10v11h11" fill="none" stroke="#E5482D" strokeWidth="4" />
+      <path d="M28 22c-6 2-8 6-8 10s2 8 8 10M37 22c6 2 8 6 8 10s-2 8-8 10" fill="none" stroke="#16324C" strokeWidth="4" strokeLinecap="square" />
+      <path d="M30 32h5" stroke="#E5482D" strokeWidth="4" strokeLinecap="square" />
+    </svg>
+  );
+}
 
 function isRecord(value: unknown): value is Record<string, unknown> {
   return typeof value === "object" && value !== null && !Array.isArray(value);
@@ -375,10 +381,10 @@ export default function Home() {
   };
 
   return (
-    <div className="atelier-app min-h-screen" style={{ backgroundImage: `url(${HERO_TEXTURE})` }}>
+    <div className="atelier-app min-h-screen">
       <aside className="atelier-rail">
         <div className="rail-brand">
-          <img src={LOGO} alt="Biểu tượng Packet Atelier" className="brand-mark" />
+          <LogoMark className="brand-mark" />
           <div>
             <p className="eyebrow">XƯỞNG DỮ LIỆU</p>
             <div className="brand-name" aria-label="Packet Atelier">
@@ -410,7 +416,7 @@ export default function Home() {
             <h1>Dán gói dữ liệu.<br /><em>Xem cấu trúc ngay.</em></h1>
           </div>
           <div className="browser-seal">
-            <img src={PRIVACY_SEAL} alt="Dấu xử lý cục bộ" />
+            <LogoMark className="mini-mark" />
             <div><strong>LOCAL / BROWSER ONLY</strong><span>Không gửi dữ liệu đi</span></div>
           </div>
         </header>
@@ -500,7 +506,7 @@ export default function Home() {
             <div className="output-window">
               <div className="ruler"><span>01</span><span>08</span><span>16</span><span>24</span></div>
               <pre>{records.length ? displayOutput : "[\n  // Bản ghi chuẩn hóa sẽ xuất hiện ở đây\n]"}</pre>
-              <img src={OUTPUT_CARD} alt="" className="output-card-art" aria-hidden="true" />
+              <div className="output-card-art" aria-hidden="true" />
             </div>
 
             <div className="output-controls">
