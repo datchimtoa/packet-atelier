@@ -9,7 +9,6 @@ import {
   Clipboard,
   Download,
   FileJson2,
-  FileUp,
   FolderOpen,
   Info,
   LockKeyhole,
@@ -523,17 +522,6 @@ export default function Home() {
               <span className="eyebrow">TRƯỜNG ĐẦU RA</span>
               <div>{ACCOUNT_FIELDS.map((field) => <code key={field}>{field}</code>)}</div>
             </div>
-          </div>
-        </section>
-
-        <section className="method-note">
-          <div className="method-item">
-            <div className="note-mark"><FileUp size={18} /></div>
-            <div><p className="eyebrow">CÁCH ĐỌC CURL</p><p>Website chỉ trích xuất header và body trong văn bản. Lệnh không được gửi, chạy hoặc phát lại.</p></div>
-          </div>
-          <div className="method-item">
-            <div className="note-mark"><LockKeyhole size={18} /></div>
-            <div><p className="eyebrow">CÁCH HIỂN THỊ</p><p>Cookie, mã phiên và dữ liệu khởi tạo được che mặc định; sao chép và tải tệp vẫn dùng JSON gốc của phiên hiện tại.</p></div>
           </div>
         </section>
 

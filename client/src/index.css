@@ -173,11 +173,7 @@
 .schema-strip > div { display: flex; flex-wrap: wrap; gap: 5px; }
 .schema-strip code { color: var(--ink); background: var(--paper-deep); padding: 3px 5px; font: 9px "IBM Plex Mono", monospace; }
 
-.method-note { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 25px; margin: 30px 0 22px; padding: 16px 0; border-top: 1px solid var(--line); border-bottom: 1px solid var(--line); }
-.method-item { display: grid; grid-template-columns: 31px minmax(0, 1fr); gap: 12px; align-items: start; }
-.note-mark { width: 31px; height: 31px; display: grid; place-items: center; background: var(--ink); color: var(--paper); }
-.method-note p:last-child { margin: 4px 0 0; color: var(--ink-soft); font-size: 12px; line-height: 1.45; }
-footer { display: flex; justify-content: space-between; color: var(--ink-soft); font: 9px "IBM Plex Mono", monospace; letter-spacing: .1em; }
+footer { display: flex; justify-content: space-between; margin-top: 28px; padding-top: 14px; border-top: 1px solid var(--line); color: var(--ink-soft); font: 9px "IBM Plex Mono", monospace; letter-spacing: .1em; }
 
 @media (prefers-reduced-motion: no-preference) {
   .topline, .source-panel, .output-panel, .method-note { animation: atelier-enter 240ms cubic-bezier(.23,1,.32,1) both; }
@@ -205,7 +201,6 @@ footer { display: flex; justify-content: space-between; color: var(--ink-soft); 
   .source-settings, .output-controls { flex-direction: column; align-items: stretch; }
   .compact-field:first-child input { width: 100%; }
   .export-buttons { justify-content: flex-end; }
-  .method-note { grid-template-columns: 1fr; gap: 15px; }
   footer { font-size: 8px; }
 }
 

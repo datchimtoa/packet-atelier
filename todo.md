@@ -9,3 +9,4 @@
 - [x] Sửa bước thiết lập pnpm trong GitHub Actions; chờ xác minh lần chạy mới.
 - [x] Bật tự động kích hoạt GitHub Pages trong workflow.
 - [x] Điều chỉnh định tuyến một trang để URL GitHub Pages của dự án luôn mở công cụ chính.
+- [x] Loại bỏ các khối lưu ý/giải thích ở cuối giao diện công cụ.
