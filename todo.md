@@ -7,3 +7,4 @@
 - [x] Tạo kho GitHub công khai `datchimtoa/packet-atelier` và đẩy mã nguồn.
 - [ ] Kích hoạt nguồn GitHub Pages bằng GitHub Actions trong cài đặt kho.
 - [x] Sửa bước thiết lập pnpm trong GitHub Actions; chờ xác minh lần chạy mới.
+- [x] Bật tự động kích hoạt GitHub Pages trong workflow.
