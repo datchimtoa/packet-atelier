@@ -6,3 +6,4 @@
 - [x] Kiểm tra bản dựng tĩnh và cấu trúc tệp triển khai.
 - [x] Tạo kho GitHub công khai `datchimtoa/packet-atelier` và đẩy mã nguồn.
 - [ ] Kích hoạt nguồn GitHub Pages bằng GitHub Actions trong cài đặt kho.
+- [x] Sửa bước thiết lập pnpm trong GitHub Actions; chờ xác minh lần chạy mới.
